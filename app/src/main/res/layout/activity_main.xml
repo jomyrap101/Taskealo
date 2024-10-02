@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/Fondo">
+
+    <!-- Contenedor donde se mostrarán las notas creadas -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/txtBienvenida"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/notes_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer con las opciones -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/contenido"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnInicio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Inicio" />
+
+        <Button
+            android:id="@+id/btnCrearNota"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Crear" />
+
+        <Button
+            android:id="@+id/btnSecreto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Secreto" />
+
+        <Button
+            android:id="@+id/btn_config"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Config" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtBienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido a la aplicación de notas"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>
