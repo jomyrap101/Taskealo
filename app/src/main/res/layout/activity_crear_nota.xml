@@ -8,6 +8,10 @@
     tools:context=".Crear_Nota"
     android:background="@color/Fondo">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
     <!-- Campo para ingresar el título de la nota -->
     <EditText
         android:id="@+id/idTitulo"
@@ -41,11 +45,16 @@
         android:hint="Texto..."
         android:padding="16dp"
         android:textSize="16sp"
+<<<<<<< HEAD
         app:layout_constraintBottom_toTopOf="@+id/button_container"
+=======
+        app:layout_constraintBottom_toTopOf="@+id/btnClave"
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idTitulo" />
 
+<<<<<<< HEAD
     <!-- Contenedor para los botones -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/button_container"
@@ -76,3 +85,37 @@
             app:layout_constraintHorizontal_bias="0.5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+    <!-- Botón Clave -->
+
+    <!-- Botón Color -->
+    <Button
+        android:id="@+id/btnClave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="16dp"
+        android:text="Clave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Regresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/idCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89

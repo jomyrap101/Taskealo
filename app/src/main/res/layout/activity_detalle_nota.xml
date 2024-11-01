@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,6 +7,14 @@
     android:background="@color/Fondo">
 
     <!-- Título de la nota -->
+=======
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
     <EditText
         android:id="@+id/txtTitulo"
         android:layout_width="match_parent"
@@ -13,6 +22,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:hint="Título"
+<<<<<<< HEAD
         android:padding="12dp"
         android:background="@color/Fondo"
         android:layout_marginBottom="8dp"
@@ -77,3 +87,32 @@
     </LinearLayout>
 
 </RelativeLayout>
+=======
+        android:paddingBottom="8dp" />
+
+    <EditText
+        android:id="@+id/txtContenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Contenido de la nota" />
+
+    <Button
+        android:id="@+id/btnModificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modificar"/>
+
+    <Button
+        android:id="@+id/btnEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"/>
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"/>
+</LinearLayout>
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89

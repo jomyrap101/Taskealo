@@ -8,6 +8,10 @@
     tools:context=".MainActivity"
     android:background="@color/Fondo">
 
+<<<<<<< HEAD
+=======
+    <!-- Contenedor donde se mostrarán las notas creadas -->
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -24,6 +28,10 @@
         </LinearLayout>
     </ScrollView>
 
+<<<<<<< HEAD
+=======
+    <!-- Footer con las opciones -->
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
     <LinearLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
@@ -48,6 +56,16 @@
             android:text="Crear" />
 
         <Button
+<<<<<<< HEAD
+=======
+            android:id="@+id/btnSecreto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Secreto" />
+
+        <Button
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
             android:id="@+id/btn_config"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

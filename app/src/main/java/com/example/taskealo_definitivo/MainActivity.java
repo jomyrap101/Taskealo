@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+<<<<<<< HEAD
+=======
+import android.widget.ScrollView;
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
 import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,7 +44,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Mostrar el diálogo de configuración solo si hay una nota seleccionada
                 if (selectedNota != null) {
+<<<<<<< HEAD
                     showColorOptions();
+=======
+                    showConfigOptions();
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
                 } else {
                     // Mostrar un mensaje si no se seleccionó ninguna nota
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -57,23 +65,39 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == 1 && resultCode == RESULT_OK && data != null) {
+<<<<<<< HEAD
             // Código para agregar una nueva nota
+=======
+            // Crear nota nueva
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
             String titulo = data.getStringExtra("titulo");
             String textoNota = data.getStringExtra("textoNota");
 
             final Nota nota = new Nota(titulo, textoNota);
 
+<<<<<<< HEAD
+=======
+            // Crear un TextView para mostrar el título de la nota
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
             TextView newNoteTitle = new TextView(this);
             newNoteTitle.setText(titulo);
             newNoteTitle.setPadding(10, 10, 10, 10);
             newNoteTitle.setTextSize(18);
             newNoteTitle.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
 
+<<<<<<< HEAD
+=======
+            // Cuando se hace clic en la nota, abrir la actividad de detalle
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
             newNoteTitle.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     selectedNota = nota;
+<<<<<<< HEAD
                     selectedNotaIndex = notesContainer.indexOfChild(newNoteTitle);
+=======
+                    selectedNotaIndex = notesContainer.indexOfChild(newNoteTitle); // Guardamos el índice
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
                     Intent intent = new Intent(MainActivity.this, DetalleNota.class);
                     intent.putExtra("titulo", nota.getTitulo());
                     intent.putExtra("contenido", nota.getCuerpo());
@@ -81,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+<<<<<<< HEAD
             notesContainer.addView(newNoteTitle);
 
         } else if (requestCode == 2 && resultCode == RESULT_OK && data != null) {
@@ -99,10 +124,26 @@ public class MainActivity extends AppCompatActivity {
                     selectedNota.setCuerpo(nuevoTextoNota);
                     updateNoteView(nuevoTitulo);
                 }
+=======
+            // Añadir el nuevo TextView (título) al contenedor de notas
+            notesContainer.addView(newNoteTitle);
+
+        } else if (requestCode == 2 && resultCode == RESULT_OK && data != null) {
+            // Actualizar nota existente
+            String nuevoTitulo = data.getStringExtra("titulo");
+            String nuevoTextoNota = data.getStringExtra("textoNota");
+
+            if (selectedNota != null) {
+                selectedNota.setTitulo(nuevoTitulo);
+                selectedNota.setCuerpo(nuevoTextoNota);
+                // Actualizar el TextView correspondiente
+                updateNoteView(nuevoTitulo);
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
             }
         }
     }
 
+<<<<<<< HEAD
     // Mostrar el diálogo con las opciones de color
     private void showColorOptions() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -133,6 +174,36 @@ public class MainActivity extends AppCompatActivity {
             TextView noteView = (TextView) notesContainer.getChildAt(index);
             noteView.setBackgroundColor(getResources().getColor(colorResource));
         }
+=======
+    // Mostrar el diálogo con las opciones de configuración
+    private void showConfigOptions() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Opciones de Nota");
+        builder.setMessage("Elige una acción");
+
+        builder.setPositiveButton("Editar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Editar la nota seleccionada
+                Intent intent = new Intent(MainActivity.this, DetalleNota.class);
+                intent.putExtra("titulo", selectedNota.getTitulo());
+                intent.putExtra("textoNota", selectedNota.getCuerpo());
+                startActivityForResult(intent, 2);  // Código 2 para editar
+            }
+        });
+
+        builder.setNegativeButton("Eliminar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Eliminar la nota seleccionada
+                eliminarNota(selectedNota);
+                selectedNota = null;  // Desseleccionar la nota
+            }
+        });
+
+        builder.setNeutralButton("Cancelar", null);
+        builder.show();
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
     }
 
     // Método para eliminar la nota seleccionada
@@ -154,4 +225,8 @@ public class MainActivity extends AppCompatActivity {
             noteView.setText(nuevoTitulo);  // Actualiza el texto del TextView
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89

@@ -52,6 +52,7 @@ public class DetalleNota extends AppCompatActivity {
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 Intent resultIntent = new Intent();
                 resultIntent.putExtra("eliminar", true); // Indica que se debe eliminar
                 setResult(RESULT_OK, resultIntent);
@@ -59,5 +60,11 @@ public class DetalleNota extends AppCompatActivity {
             }
         });
 
+=======
+                setResult(RESULT_CANCELED); // No devolver nada si se elimina
+                finish();
+            }
+        });
+>>>>>>> 34ac29ef306056bb3f2484e85bef61d420ff6d89
     }
 }
