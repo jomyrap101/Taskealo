@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/Fondo">
+
+    <!-- Título de la nota -->
+    <EditText
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:hint="Título"
+        android:padding="12dp"
+        android:background="@color/Fondo"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentTop="true" />
+
+    <!-- Contenido de la nota -->
+    <EditText
+        android:id="@+id/txtContenido"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/txtTitulo"
+        android:layout_above="@+id/button_container"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="18sp"
+        android:hint="Contenido de la nota"
+        android:padding="12dp"
+        android:background="@color/Fondo"
+        android:gravity="start"/>
+
+    <!-- Contenedor de botones de acción -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <!-- Botón Modificar -->
+        <Button
+            android:id="@+id/btnModificar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Modificar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/contenido"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Botón Eliminar -->
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Eliminar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/contenido"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Botón Salir -->
+        <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Salir"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/contenido" />
+    </LinearLayout>
+
+</RelativeLayout>
